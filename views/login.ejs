@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ./part/head.ejs %>
+	</head>
+
+	<body>
+		<% include ./part/navbar.ejs %>
+
+		<!-- <h1><%= title %></h1> -->
+		<!-- <p>Welcome to <%= title %></p> -->
+
+		<div class="container auth-container">
+			
+			<div class="panel panel-default animated" id="loginPanel">
+				<div class="panel-heading">
+					<h2 class="text-center">Log in</h2>
+				</div>
+				<div class="panel-body">
+					<form action="login" method="POST" style="background-color: white;" onsubmit="event.preventDefault(); login()">
+
+						<!-- Email -->
+						<div class="form-group text-center">
+							<div class="input-group">
+								<div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+								<input name="email" id="email" class="form-control input-lg" type="text" placeholder="Email" required autofocus>
+							</div>
+						</div>
+
+						<!-- Password -->
+						<div class="form-group text-center">
+							<div class="input-group">
+								<div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+								<input name="password" id="password" class="form-control input-lg" type="password" placeholder="Password" required>
+							</div>
+						</div>
+
+						<div class="form-group form-inline text-center">
+							<input type="submit" name="submit" class="btn btn-success" value="LOG IN">
+							<!-- <a href="register.php" class="btn btn-primary margin-left-2em">SIGN UP</a> -->
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<% include ./part/footer.ejs %>
+		</footer>
+	</body>
+</html>
